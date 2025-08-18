@@ -31,7 +31,7 @@ export function NavigationCardHeader({
   return (
     <div
       className={cn(
-        "flex p-6 flex-col items-start gap-4 lg:gap-6 bg-primary-light-1-b group-hover:bg-primary-light-2 transition-all duration-300 ease-in-out",
+        "flex p-6 flex-col border-x border-[rgba(55,30,19,0.08)] lg:border-0 items-start gap-4 lg:gap-6 bg-primary-light-1-b group-hover:bg-primary-light-2 transition-all duration-300 ease-in-out",
         className
       )}
     >
