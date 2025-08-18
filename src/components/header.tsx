@@ -27,7 +27,7 @@ const sections: Section[] = [
 
 export function Header() {
   return (
-    <header className="flex max-w-[min(1100px,calc(100vw-32px))] h-[60px] lg:h-[68px] w-full fixed top-6 py-3 px-8 justify-between items-center rounded-full bg-primary-light-1-b">
+    <header className="flex z-50 max-w-[min(1100px,calc(100vw-32px))] h-[60px] lg:h-[68px] w-full fixed top-[21px] lg:top-6 py-2 lg:py-3 px-6 lg:px-8 justify-between items-center rounded-full bg-primary-light-1-b">
       <a
         href="/"
         className="text-primary-dark-2 font-poppins text-xl font-light tracking-[-0.5px]"
@@ -51,13 +51,10 @@ export function Header() {
         ENTRAR EM CONTATO
       </Button>
 
-      <Button
-        size="icon"
-        className="bg-secondary-light-4 hover:bg-secondary-light-4 active:bg-secondary-light-4"
-      >
-        <img src={Menu} alt="Menu" />
+      <button className="bg-secondary-light-4 rounded-full  hover:bg-secondary-light-4 active:bg-secondary-light-4 text-[#f8f1e4] size-[44px] p-2.5 lg:hidden">
+        <img src={Menu} alt="Menu" className="shrink-0" />
         <div className="sr-only">Menu</div>
-      </Button>
+      </button>
     </header>
   );
 }
