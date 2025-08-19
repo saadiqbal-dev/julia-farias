@@ -16,7 +16,7 @@ import { services } from "@/data/services";
 
 export function Services() {
   return (
-    <section id="services">
+    <section id="servicos">
       <div className="max-w-[min(1100px,calc(100vw-32px))] flex flex-col gap-10 mx-auto">
         <h2 className="self-stretch text-primary-dark-2 font-poppins text-[32px] font-medium tracking-[-0.32px]">
           Serviços
