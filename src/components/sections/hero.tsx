@@ -7,7 +7,7 @@ import {
   NavigationCardContent,
   NavigationCardHeader,
   NavigationCardTitle,
-} from "../navigation-card";
+} from "../hero/navigation-card";
 
 type NavigationCardItem = {
   category: string;
@@ -55,12 +55,12 @@ export function HeroSection() {
         <img
           src={Background}
           alt="Background"
-          className="absolute hidden md:block md:right-[235px] md:top-0 z-0 fill-primary-light-1-b opacity-[0.5] bg-blend-soft-light"
+          className="absolute pointer-events-none hidden md:block md:right-[235px] md:top-0 z-0 fill-primary-light-1-b opacity-[0.5] bg-blend-soft-light"
         />
         <img
           src={BackgroundMobile}
           alt="Background Mobile"
-          className="absolute md:hidden top-0 right-0 w-full z-0 fill-primary-light-1-b opacity-[0.5] bg-blend-soft-light"
+          className="absolute pointer-events-none md:hidden top-0 right-0 w-full z-0 fill-primary-light-1-b opacity-[0.5] bg-blend-soft-light"
         />
       </div>
       <div className="grid lg:grid-cols-3 overflow-clip -mt-33.5 lg:-mt-35.5 z-10 max-w-[min(1100px,calc(100vw-32px))] rounded-3xl bg-[#f3f3f3]">

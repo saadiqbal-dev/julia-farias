@@ -11,7 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "px-[32px]! py-3 justify-center items-center gap-2 rounded-full border-[1.6px] border-[#F8F1E4] bg-[rgba(248,241,228,0.90)] [backdrop-filter:blur(2px)] text-secondary-light-4 font-sora text-center h-[50px]! text-[20px]! font-semibold",
+          "px-[32px]! py-3 justify-center items-center gap-2 rounded-full border-[1.6px] border-[#F8F1E4] bg-[rgba(248,241,228,0.90)] [backdrop-filter:blur(2px)] text-secondary-light-4 font-sora text-center h-[50px]! text-[20px]! font-semibold hover:border-[#F8F1E4] hover:[background:linear-gradient(0deg,rgba(237,218,187,0.40),rgba(237,218,187,0.40)),rgba(248,241,228,0.90)] hover:[backdrop-filter:blur(2px)] active:[background:linear-gradient(0deg,rgba(237,218,187,0.88),rgba(237,218,187,0.88)),rgba(248,241,228,0.90)] transition-all duration-300 ease-in-out active:border-transparent active:[backdrop-filter:blur(2px)]",
         destructive:
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
