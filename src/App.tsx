@@ -4,7 +4,7 @@ import { Services } from "./components/sections/services";
 
 function App() {
   return (
-    <MainLayout className="gap-14 lg:gap-28 flex flex-col">
+    <MainLayout className="gap-14 flex flex-col">
       <HeroSection />
       <Services />
     </MainLayout>
