@@ -15,7 +15,7 @@ export function AboutMe() {
   return (
     <section
       id="sobre-mim"
-      className="flex flex-col md:flex-row items-start gap-12 w-full md:pl-[calc((100vw-min(1100px,calc(100vw-32px)))/2)] md:py-14 overflow-x-clip"
+      className="flex flex-col md:flex-row items-start gap-12 w-full md:pl-[calc((100vw-min(1116px,calc(100vw-32px)))/2)] md:py-14 overflow-x-clip"
     >
       <div className="flex flex-col gap-8 max-w-fit shrink-0 px-4 md:px-0">
         <h2 className="self-stretch text-primary-dark-2 font-poppins text-[32px] font-medium tracking-[-0.32px]">
@@ -80,10 +80,7 @@ export function AboutMe() {
         </a>
       </div>
 
-      <Marquee
-        pauseOnHover
-        className="[--gap:2rem] md:[--gap:5rem] [--duration:120s]"
-      >
+      <Marquee className="[--gap:2rem] md:[--gap:5rem] [--duration:120s]">
         {images.map((image, index) => (
           <img
             src={image}
