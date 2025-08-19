@@ -28,10 +28,10 @@ export function ServiceCard({
 }: ServiceCardProps) {
   return (
     <Dialog>
-      <DialogTrigger asChild>
+      <DialogTrigger asChild className="aspect-[315/280] lg:aspect-[348/380]">
         <button
           className={cn(
-            "flex w-full aspect-[315/280] lg:aspect-[348/380] min-h-[280px] flex-col justify-end items-start gap-8 rounded-3xl bg-white bg-cover bg-center bg-no-repeat overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-[1.0] active:scale-[1.0]",
+            "flex w-full aspect-[315/280] min-h-[315px] lg:aspect-[348/380] flex-col justify-end items-start gap-8 rounded-3xl bg-white bg-cover bg-center bg-no-repeat overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-[1.0] active:scale-[1.0]",
             className
           )}
           style={{

@@ -5,6 +5,7 @@ import { ClientTestimonials } from "./components/sections/client-testimonials";
 import { AboutMe } from "./components/sections/about-me";
 import { FAQ } from "./components/sections/faq";
 import { Footer } from "./components/footer";
+import { Instagram } from "./components/sections/instagram";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Services />
       <ClientTestimonials />
       <AboutMe />
+      <Instagram />
       <FAQ />
       <Footer />
     </MainLayout>
