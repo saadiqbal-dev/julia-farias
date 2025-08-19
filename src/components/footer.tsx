@@ -111,7 +111,7 @@ export function Footer() {
             <a
               key={location.area}
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                location.line
+                location.line,
               )}`}
               target="_blank"
               rel="noopener noreferrer"
