@@ -4,6 +4,7 @@ import { Services } from "./components/sections/services";
 import { ClientTestimonials } from "./components/sections/client-testimonials";
 import { AboutMe } from "./components/sections/about-me";
 import { FAQ } from "./components/sections/faq";
+import { Footer } from "./components/footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ClientTestimonials />
       <AboutMe />
       <FAQ />
+      <Footer />
     </MainLayout>
   );
 }

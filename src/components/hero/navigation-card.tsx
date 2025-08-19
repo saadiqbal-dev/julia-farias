@@ -11,7 +11,7 @@ export function NavigationCard({ className, children }: NavigationCardProps) {
     <div
       className={cn(
         "flex flex-col max-w-[382px] w-full lg:max-w-full items-start group",
-        className,
+        className
       )}
     >
       {children}
@@ -22,21 +22,24 @@ export function NavigationCard({ className, children }: NavigationCardProps) {
 interface NavigationCardHeaderProps {
   className?: string;
   children: React.ReactNode;
+  href: string;
 }
 
 export function NavigationCardHeader({
   className,
   children,
+  href,
 }: NavigationCardHeaderProps) {
   return (
-    <div
+    <a
+      href={href}
       className={cn(
         "flex p-6 flex-col border-x border-[rgba(55,30,19,0.08)] lg:border-0 items-start gap-4 lg:gap-6 bg-primary-light-1-b group-hover:bg-primary-light-2 transition-all duration-300 ease-in-out",
-        className,
+        className
       )}
     >
       {children}
-    </div>
+    </a>
   );
 }
 
@@ -53,7 +56,7 @@ export function NavigationCardTitle({
     <h4
       className={cn(
         "self-stretch text-primary-dark-4 font-poppins text-base font-semibold leading-[145%] tracking-[-0.16px]",
-        className,
+        className
       )}
     >
       {children}

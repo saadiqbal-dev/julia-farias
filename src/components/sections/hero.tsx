@@ -13,6 +13,7 @@ type NavigationCardItem = {
   category: string;
   title: string;
   imgSrc: string;
+  href: string;
 };
 
 const navigationCards: NavigationCardItem[] = [
@@ -20,16 +21,19 @@ const navigationCards: NavigationCardItem[] = [
     category: "Sobre mim",
     title: "Conheça a profissional que construirá o seu sorriso",
     imgSrc: "/images/foto-1.webp",
+    href: "#sobre-mim",
   },
   {
     category: "Serviços",
     title: "Explore todos os meus serviços disponíveis para você",
     imgSrc: "/images/foto-2.webp",
+    href: "#servicos",
   },
   {
     category: "Dúvidas Frequentes",
     title: "Uma dúvida apareceu? Veja se suas dúvidas estão dentro do FAQ",
     imgSrc: "/images/foto-3.webp",
+    href: "#faq",
   },
 ];
 
@@ -66,7 +70,7 @@ export function HeroSection() {
       <div className="grid md:grid-cols-3 overflow-clip -mt-33.5 lg:-mt-35.5 z-10 max-w-[min(1100px,calc(100vw-32px))] rounded-3xl bg-[#f3f3f3]">
         {navigationCards.map((card) => (
           <NavigationCard key={card.title}>
-            <NavigationCardHeader>
+            <NavigationCardHeader href={card.href}>
               <NavigationCardCategory>{card.category}</NavigationCardCategory>
               <NavigationCardTitle>{card.title}</NavigationCardTitle>
             </NavigationCardHeader>
