@@ -6,52 +6,52 @@ import Threads from "@/assets/threads.svg";
 
 type Section = {
   label: string;
-  id: string;
+  href: string;
 };
 
 const sections: Section[] = [
   {
     label: "Início",
-    id: "hero",
+    href: "#hero",
   },
   {
     label: "FAQ",
-    id: "faq",
+    href: "#faq",
   },
   {
     label: "Sobre mim",
-    id: "sobre-mim",
+    href: "#sobre-mim",
   },
   {
     label: "Contato",
-    id: "contato",
+    href: "#footer",
   },
   {
     label: "Serviços",
-    id: "servicos",
+    href: "#servicos",
   },
 ];
 
 const sectionsMobile: Section[] = [
   {
     label: "Início",
-    id: "hero",
+    href: "#hero",
   },
   {
     label: "Sobre mim",
-    id: "sobre-mim",
+    href: "#sobre-mim",
   },
   {
     label: "Serviços",
-    id: "servicos",
+    href: "#servicos",
   },
   {
     label: "FAQ",
-    id: "faq",
+    href: "#faq",
   },
   {
     label: "Contato",
-    id: "contato",
+    href: "#footer",
   },
 ];
 
@@ -64,17 +64,17 @@ type SocialLink = {
 const socialLinks: SocialLink[] = [
   {
     name: "Facebook",
-    url: "https://www.facebook.com/juliafarias",
+    url: "https://www.facebook.com/drajuliafarias",
     icon: Facebook,
   },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/juliafarias",
+    url: "https://www.instagram.com/drajuliafarias/",
     icon: Instagram,
   },
   {
     name: "Threads",
-    url: "https://www.threads.net/juliafarias",
+    url: "https://www.threads.com/@drajuliafarias",
     icon: Threads,
   },
 ];
@@ -101,15 +101,15 @@ const locations: Location[] = [
 
 export function Footer() {
   return (
-    <footer className="bg-secondary-light-4 text-white">
+    <footer className="bg-secondary-light-4 text-white" id="footer">
       <div className="max-w-[min(1100px,calc(100vw-32px))] flex flex-col md:flex-row items-center gap-12 md:gap-9 mx-auto w-full py-14">
         <img src={Logo} alt="Julia Farias" />
         <div className="h-full flex flex-col gap-16 justify-between md:mr-12">
           <div className="grid text-center md:text-left md:grid-cols-2">
             {sections.map((section) => (
               <a
-                key={section.id}
-                href={`#${section.id}`}
+                key={section.href}
+                href={`${section.href}`}
                 className="text-primary-light-1-b hidden md:block h-10 px-6 py-1 justify-center items-center font-poppins text-sm font-semibold tracking-[-0.14px] hover:opacity-80"
               >
                 {section.label}
@@ -117,8 +117,8 @@ export function Footer() {
             ))}
             {sectionsMobile.map((section) => (
               <a
-                key={section.id}
-                href={`#${section.id}`}
+                key={section.href}
+                href={`${section.href}`}
                 className="text-primary-light-1-b md:hidden h-10 px-6 py-1 justify-center items-center font-poppins text-sm font-semibold tracking-[-0.14px] hover:opacity-80"
               >
                 {section.label}

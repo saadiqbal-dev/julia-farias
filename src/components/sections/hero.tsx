@@ -53,7 +53,15 @@ export function HeroSection() {
             Tenha um sorriso natural feito <br className="md:hidden" /> somente
             pra você
           </h1>
-          <Button className="max-w-full md:max-w-fit">AGENDAR CONSULTA</Button>
+          <a
+            href="https://contate.me/agendamentosdrajuliafarias"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="max-w-full md:max-w-fit">
+              AGENDAR CONSULTA
+            </Button>
+          </a>
         </div>
 
         <img

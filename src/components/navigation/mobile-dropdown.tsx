@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 interface MobileDropdownProps {
   sections: Array<{
     label: string;
-    id: string;
+    href: string;
   }>;
 }
 
@@ -15,19 +15,13 @@ export const MobileDropdown = React.memo(
 
     const toggleMenu = React.useCallback(
       () => setIsMenuOpen((prev) => !prev),
-      [],
+      []
     );
     const closeMenu = React.useCallback(() => setIsMenuOpen(false), []);
 
-    const handleSectionClick = React.useCallback(
-      (sectionId: string) => {
-        closeMenu();
-        document
-          .getElementById(sectionId)
-          ?.scrollIntoView({ behavior: "smooth" });
-      },
-      [closeMenu],
-    );
+    const handleSectionClick = React.useCallback(() => {
+      closeMenu();
+    }, [closeMenu]);
 
     return (
       <>
@@ -170,9 +164,10 @@ export const MobileDropdown = React.memo(
                   className="p-6"
                 >
                   {sections.map((section) => (
-                    <motion.button
-                      key={section.id}
-                      onClick={() => handleSectionClick(section.id)}
+                    <motion.a
+                      key={section.href}
+                      href={section.href}
+                      onClick={() => handleSectionClick()}
                       variants={{
                         open: {
                           opacity: 1,
@@ -199,7 +194,7 @@ export const MobileDropdown = React.memo(
                       className="w-full flex items-center justify-center py-4 text-primary-dark-2 font-poppins text-lg font-normal tracking-[-0.2px] rounded-2xl transition-colors hover:text-primary-light-4"
                     >
                       {section.label}
-                    </motion.button>
+                    </motion.a>
                   ))}
 
                   {/* Contact Button - No separator */}
@@ -222,7 +217,10 @@ export const MobileDropdown = React.memo(
                     }}
                     className="pt-4"
                   >
-                    <motion.div
+                    <motion.a
+                      href="https://contate.me/agendamentosdrajuliafarias"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.99 }}
                     >
@@ -233,7 +231,7 @@ export const MobileDropdown = React.memo(
                       >
                         ENTRAR EM CONTATO
                       </Button>
-                    </motion.div>
+                    </motion.a>
                   </motion.div>
                 </motion.div>
               </motion.div>
@@ -242,7 +240,7 @@ export const MobileDropdown = React.memo(
         </AnimatePresence>
       </>
     );
-  },
+  }
 );
 
 MobileDropdown.displayName = "MobileDropdown";

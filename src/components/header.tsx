@@ -3,25 +3,25 @@ import { MobileDropdown } from "./navigation/mobile-dropdown";
 
 type Section = {
   label: string;
-  id: string;
+  href: string;
 };
 
 const sections: Section[] = [
   {
     label: "SOBRE MIM",
-    id: "sobre-mim",
+    href: "#sobre-mim",
   },
   {
     label: "SERVIÇOS",
-    id: "servicos",
+    href: "#servicos",
   },
   {
     label: "FAQ",
-    id: "faq",
+    href: "#faq",
   },
   {
     label: "CONTATO",
-    id: "contato",
+    href: "#footer",
   },
 ];
 
@@ -38,8 +38,8 @@ export function Header() {
       <div className="lg:flex items-center hidden">
         {sections.map((section) => (
           <a
-            key={section.id}
-            href={`#${section.id}`}
+            key={section.href}
+            href={`${section.href}`}
             className="flex px-6 py-2 justify-center items-center gap-2 text-primary-dark-2 text-center font-poppins text-base font-normal leading-[130%] transition-colors duration-300 ease-in-out hover:text-primary-light-4"
           >
             {section.label}
@@ -47,9 +47,15 @@ export function Header() {
         ))}
       </div>
 
-      <Button variant="outline" className="hidden lg:flex">
-        ENTRAR EM CONTATO
-      </Button>
+      <a
+        href="https://contate.me/agendamentosdrajuliafarias"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button variant="outline" className="hidden lg:flex">
+          ENTRAR EM CONTATO
+        </Button>
+      </a>
 
       <MobileDropdown sections={sections} />
     </header>

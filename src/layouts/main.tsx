@@ -13,7 +13,7 @@ export function MainLayout({ children, className }: MainLayoutProps) {
       <main className={cn("flex-1 w-full", className)}>{children}</main>
 
       <a
-        href="#"
+        href="https://contate.me/agendamentosdrajuliafarias"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed lg:right-6 lg:bottom-6 size-11 lg:size-18 right-3 bottom-3 z-50 hover:opacity-80 transition-all duration-300 ease-in-out hover:scale-95 active:scale-90"
