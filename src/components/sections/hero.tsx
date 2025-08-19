@@ -74,7 +74,7 @@ export function HeroSection() {
               <img
                 src={card.imgSrc}
                 alt={card.title}
-                className="max-w-[382px] max-h-[417px] md:max-h-full md:h-[402px] object-cover md:max-w-full w-full"
+                className="max-w-[382px] max-h-[417px] md:max-h-full md:h-full aspect-[382/417] md:aspect-[365/402] object-cover md:max-w-full w-full"
               />
             </NavigationCardContent>
           </NavigationCard>
