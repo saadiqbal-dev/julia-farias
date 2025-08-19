@@ -1,14 +1,14 @@
 import { Marquee } from "../magicui/marquee";
 
 const images: string[] = [
-  "/images/sobre-mim/sobre-mim-1.png",
-  "/images/sobre-mim/sobre-mim-2.png",
-  "/images/sobre-mim/sobre-mim-1.png",
-  "/images/sobre-mim/sobre-mim-2.png",
-  "/images/sobre-mim/sobre-mim-1.png",
-  "/images/sobre-mim/sobre-mim-2.png",
-  "/images/sobre-mim/sobre-mim-1.png",
-  "/images/sobre-mim/sobre-mim-2.png",
+  "/images/sobre-mim/sobre-mim-1.webp",
+  "/images/sobre-mim/sobre-mim-2.webp",
+  "/images/sobre-mim/sobre-mim-1.webp",
+  "/images/sobre-mim/sobre-mim-2.webp",
+  "/images/sobre-mim/sobre-mim-1.webp",
+  "/images/sobre-mim/sobre-mim-2.webp",
+  "/images/sobre-mim/sobre-mim-1.webp",
+  "/images/sobre-mim/sobre-mim-2.webp",
 ];
 
 export function AboutMe() {
