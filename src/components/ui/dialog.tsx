@@ -40,7 +40,7 @@ function DialogOverlay({
         "data-[state=open]:animate-in data-[state=closed]:animate-out",
         "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
         "data-[state=open]:duration-200 data-[state=closed]:duration-150",
-        className
+        className,
       )}
       {...props}
     />
@@ -71,7 +71,7 @@ function DialogContent({
           "md:data-[state=closed]:slide-out-to-bottom-0 md:data-[state=open]:slide-in-from-bottom-0",
           // Timing
           "data-[state=open]:duration-300 data-[state=closed]:duration-200",
-          className
+          className,
         )}
         {...props}
       >
@@ -106,7 +106,7 @@ function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
       data-slot="dialog-footer"
       className={cn(
         "flex flex-col-reverse gap-2 sm:flex-row sm:justify-end",
-        className
+        className,
       )}
       {...props}
     />
@@ -122,7 +122,7 @@ function DialogTitle({
       data-slot="dialog-title"
       className={cn(
         "text-secondary-dark-3 font-poppins text-xl font-semibold leading-[145%] tracking-[-0.4px]",
-        className
+        className,
       )}
       {...props}
     />
@@ -138,7 +138,7 @@ function DialogDescription({
       data-slot="dialog-description"
       className={cn(
         "text-primary-dark-4 font-sora text-base font-normal leading-[150%] tracking-[-0.32px]",
-        className
+        className,
       )}
       {...props}
     />
