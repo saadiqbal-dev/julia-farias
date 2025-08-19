@@ -32,6 +32,29 @@ const sections: Section[] = [
   },
 ];
 
+const sectionsMobile: Section[] = [
+  {
+    label: "Início",
+    id: "hero",
+  },
+  {
+    label: "Sobre mim",
+    id: "sobre-mim",
+  },
+  {
+    label: "Serviços",
+    id: "servicos",
+  },
+  {
+    label: "FAQ",
+    id: "faq",
+  },
+  {
+    label: "Contato",
+    id: "contato",
+  },
+];
+
 type SocialLink = {
   name: string;
   url: string;
@@ -87,14 +110,23 @@ export function Footer() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="text-primary-light-1-b h-10 px-6 py-1 justify-center items-center font-poppins text-sm font-semibold tracking-[-0.14px] hover:opacity-80"
+                className="text-primary-light-1-b hidden md:block h-10 px-6 py-1 justify-center items-center font-poppins text-sm font-semibold tracking-[-0.14px] hover:opacity-80"
+              >
+                {section.label}
+              </a>
+            ))}
+            {sectionsMobile.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className="text-primary-light-1-b md:hidden h-10 px-6 py-1 justify-center items-center font-poppins text-sm font-semibold tracking-[-0.14px] hover:opacity-80"
               >
                 {section.label}
               </a>
             ))}
           </div>
 
-          <div className="flex items-center gap-4 md:ps-6">
+          <div className="flex items-center gap-6 md:gap-4 md:ps-6">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
@@ -111,7 +143,7 @@ export function Footer() {
             <a
               key={location.area}
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                location.line,
+                location.line
               )}`}
               target="_blank"
               rel="noopener noreferrer"
