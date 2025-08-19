@@ -19,17 +19,17 @@ const navigationCards: NavigationCardItem[] = [
   {
     category: "Sobre mim",
     title: "Conheça a profissional que construirá o seu sorriso",
-    imgSrc: "/images/foto-1.jpg",
+    imgSrc: "/images/foto-1.webp",
   },
   {
     category: "Serviços",
     title: "Explore todos os meus serviços disponíveis para você",
-    imgSrc: "/images/foto-2.png",
+    imgSrc: "/images/foto-2.webp",
   },
   {
     category: "Dúvidas Frequentes",
     title: "Uma dúvida apareceu? Veja se suas dúvidas estão dentro do FAQ",
-    imgSrc: "/images/foto-3.png",
+    imgSrc: "/images/foto-3.webp",
   },
 ];
 

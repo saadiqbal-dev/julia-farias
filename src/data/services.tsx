@@ -7,7 +7,7 @@ type ServiceItem = {
 
 export const services: ServiceItem[] = [
   {
-    imgSrc: "/images/services/service-1.png",
+    imgSrc: "/images/services/service-1.webp",
     title: "Facetas em Resina",
     subTitle: "Saiba mais",
     supportingText: (
@@ -36,7 +36,7 @@ export const services: ServiceItem[] = [
     ),
   },
   {
-    imgSrc: "/images/services/service-2.png",
+    imgSrc: "/images/services/service-2.webp",
     title: "Alinhadores",
     subTitle: "Saiba mais",
     supportingText: (
@@ -59,7 +59,7 @@ export const services: ServiceItem[] = [
     ),
   },
   {
-    imgSrc: "/images/services/service-3.png",
+    imgSrc: "/images/services/service-3.webp",
     title: "Lentes de Porcelana",
     subTitle: "Saiba mais",
     supportingText: (
@@ -80,7 +80,7 @@ export const services: ServiceItem[] = [
     ),
   },
   {
-    imgSrc: "/images/services/service-4.png",
+    imgSrc: "/images/services/service-4.webp",
     title: "Clareamento Dental",
     subTitle: "Saiba mais",
     supportingText: (
@@ -101,7 +101,7 @@ export const services: ServiceItem[] = [
     ),
   },
   {
-    imgSrc: "/images/services/service-5.png",
+    imgSrc: "/images/services/service-5.webp",
     title: "Implantes Dentários",
     subTitle: "Saiba mais",
     supportingText: (
@@ -123,7 +123,7 @@ export const services: ServiceItem[] = [
     ),
   },
   {
-    imgSrc: "/images/services/service-6.png",
+    imgSrc: "/images/services/service-6.webp",
     title: "Prótese Protocolo",
     subTitle: "Saiba mais",
     supportingText: (

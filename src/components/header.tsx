@@ -30,7 +30,7 @@ export function Header() {
     <header className="flex z-[60] max-w-[min(1100px,calc(100vw-32px))] h-[60px] lg:h-[68px] w-full fixed top-[21px] lg:top-6 py-2 lg:py-3 px-6 lg:px-8 justify-between items-center rounded-full bg-primary-light-1-b">
       <a
         href="/"
-        className="text-primary-dark-2 font-poppins text-xl font-light tracking-[-0.5px]"
+        className="text-primary-dark-2 transition-colors duration-300 ease-in-out hover:text-primary-light-4 font-poppins text-xl font-light tracking-[-0.5px]"
       >
         Júlia Farias
       </a>

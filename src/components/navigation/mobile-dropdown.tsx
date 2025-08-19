@@ -94,7 +94,7 @@ export const MobileDropdown = React.memo(
               <header className="flex z-[60] max-w-[min(1100px,calc(100vw-32px))] h-[60px] w-full fixed top-[21px] left-1/2 -translate-x-1/2 py-2 px-6 justify-between items-center rounded-full bg-primary-light-1-b lg:hidden">
                 <a
                   href="/"
-                  className="text-primary-dark-2 font-poppins text-xl font-light tracking-[-0.5px]"
+                  className="text-primary-dark-2 transition-colors duration-300 ease-in-out hover:text-primary-light-4 font-poppins text-xl font-light tracking-[-0.5px]"
                   onClick={closeMenu}
                 >
                   Júlia Farias
@@ -196,7 +196,7 @@ export const MobileDropdown = React.memo(
                       whileTap={{
                         backgroundColor: "rgba(240, 229, 216, 0.8)",
                       }}
-                      className="w-full flex items-center justify-center py-4 text-primary-dark-2 font-poppins text-lg font-normal tracking-[-0.2px] rounded-2xl transition-colors hover:text-primary-dark-4"
+                      className="w-full flex items-center justify-center py-4 text-primary-dark-2 font-poppins text-lg font-normal tracking-[-0.2px] rounded-2xl transition-colors hover:text-primary-light-4"
                     >
                       {section.label}
                     </motion.button>
