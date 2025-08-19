@@ -16,7 +16,7 @@ export function MainLayout({ children, className }: MainLayoutProps) {
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed lg:right-6 lg:bottom-6 size-11 lg:size-18 right-3 bottom-3"
+        className="fixed lg:right-6 lg:bottom-6 size-11 lg:size-18 right-3 bottom-3 z-50"
       >
         <img src={"/images/whatsApp.png"} alt="WhatsApp" />
       </a>
