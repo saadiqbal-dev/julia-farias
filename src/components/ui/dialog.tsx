@@ -36,7 +36,10 @@ function DialogOverlay({
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-[rgba(244,233,224,0.72)] backdrop-blur-xs",
+        "fixed inset-0 z-[70] bg-[rgba(244,233,224,0.72)] backdrop-blur-xs",
+        "data-[state=open]:animate-in data-[state=closed]:animate-out",
+        "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        "data-[state=open]:duration-200 data-[state=closed]:duration-150",
         className
       )}
       {...props}
@@ -58,7 +61,16 @@ function DialogContent({
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom md:data-[state=closed]:slide-out-to-bottom-0 md:data-[state=open]:slide-in-from-bottom-0 md:data-[state=closed]:zoom-out-95 md:data-[state=open]:zoom-in-95 fixed left-0 bottom-0 md:top-[50%] md:left-[50%] z-50 flex flex-col w-full md:h-fit max-h-[90vh] md:w-auto md:max-w-[569px] md:translate-x-[-50%] md:translate-y-[-50%] gap-4 rounded-t-2xl md:rounded-2xl border-0 md:border px-6 py-6 md:px-10 md:py-8 duration-200",
+          "bg-background fixed left-0 bottom-0 md:top-[50%] md:left-[50%] z-[80] flex flex-col w-full md:h-fit max-h-[90vh] md:w-auto md:max-w-[569px] md:translate-x-[-50%] md:translate-y-[-50%] gap-4 rounded-t-2xl md:rounded-2xl border-0 md:border px-6 py-6 md:px-10 md:py-8",
+          // Mobile animations (slide from bottom)
+          "data-[state=open]:animate-in data-[state=closed]:animate-out",
+          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+          "data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
+          "data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+          // Desktop animations (override mobile slide, keep zoom + fade)
+          "md:data-[state=closed]:slide-out-to-bottom-0 md:data-[state=open]:slide-in-from-bottom-0",
+          // Timing
+          "data-[state=open]:duration-300 data-[state=closed]:duration-200",
           className
         )}
         {...props}
