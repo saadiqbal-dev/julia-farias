@@ -63,7 +63,7 @@ export function HeroSection() {
           className="absolute pointer-events-none md:hidden top-0 right-0 w-full z-0 fill-primary-light-1-b opacity-[0.5] bg-blend-soft-light"
         />
       </div>
-      <div className="grid lg:grid-cols-3 overflow-clip -mt-33.5 lg:-mt-35.5 z-10 max-w-[min(1100px,calc(100vw-32px))] rounded-3xl bg-[#f3f3f3]">
+      <div className="grid md:grid-cols-3 overflow-clip -mt-33.5 lg:-mt-35.5 z-10 max-w-[min(1100px,calc(100vw-32px))] rounded-3xl bg-[#f3f3f3]">
         {navigationCards.map((card) => (
           <NavigationCard key={card.title}>
             <NavigationCardHeader>
@@ -74,7 +74,7 @@ export function HeroSection() {
               <img
                 src={card.imgSrc}
                 alt={card.title}
-                className="max-w-[382px] max-h-[417px] lg:max-h-full lg:h-[402px] object-cover lg:max-w-full w-full"
+                className="max-w-[382px] max-h-[417px] md:max-h-full md:h-[402px] object-cover md:max-w-full w-full"
               />
             </NavigationCardContent>
           </NavigationCard>

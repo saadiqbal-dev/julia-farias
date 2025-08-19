@@ -92,7 +92,7 @@ export function NavigationCardContent({
   children,
 }: NavigationCardContentProps) {
   return (
-    <div className={cn("flex flex-col w-full items-start", className)}>
+    <div className={cn("flex flex-col w-full h-full items-start", className)}>
       {children}
     </div>
   );

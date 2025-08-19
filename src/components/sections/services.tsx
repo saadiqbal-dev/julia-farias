@@ -38,7 +38,7 @@ export function Services() {
           ))}
         </div>
       </div>
-      <div className="lg:hidden">
+      <div className="lg:hidden pt-6">
         <Carousel className="w-full">
           <CarouselContent className="overflow-visible me-4">
             {services.map((service, index) => (
@@ -62,7 +62,7 @@ export function Services() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="pt-10 px-4 flex items-center gap-4">
+          <div className="pt-6 px-4 flex items-center gap-4">
             <CarouselPrevious />
             <CarouselNext />
           </div>
