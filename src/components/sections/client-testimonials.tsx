@@ -22,14 +22,14 @@ function Testimonial({ author, text, className }: Testimonial) {
     <div
       className={cn(
         "flex md:max-w-[535px] h-full w-full px-10 py-6 flex-col gap-2 rounded-2xl bg-secondary-light-1",
-        className,
+        className
       )}
     >
       <img src={Quote} alt="Quote Icon" className="size-10" />
       <p className="self-stretch text-primary-dark-2 font-sora text-base font-light leading-[145%]">
         {text}
       </p>
-      <h4 className="text-primary-dark-2 font-sora text-sm font-semibold leading-[145%]">
+      <h4 className="text-primary-dark-2 mt-auto font-sora text-sm font-semibold leading-[145%]">
         {author}
       </h4>
     </div>
@@ -90,7 +90,7 @@ export function ClientTestimonials() {
                     "sm:basis-2/3 lg:basis-2/5 max-w-[535px]",
                     index === 0 && "pr-2 lg:pr-0",
                     index === testimonials.length - 1 &&
-                      "pr-2 lg:pr-0 max-w-auto",
+                      "pr-2 lg:pr-0 max-w-auto"
                   )}
                   style={{ marginRight }}
                 >
