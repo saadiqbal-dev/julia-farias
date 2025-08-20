@@ -1,4 +1,7 @@
+import { useState } from "react";
 import { Marquee } from "../magicui/marquee";
+import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "motion/react";
 
 const images: string[] = [
   "/images/sobre-mim/sobre-mim-1.webp",
@@ -12,6 +15,8 @@ const images: string[] = [
 ];
 
 export function AboutMe() {
+  const [continueReading, setContinueReading] = useState(false);
+
   return (
     <section
       id="sobre-mim"
@@ -22,20 +27,34 @@ export function AboutMe() {
           Sobre mim
         </h2>
         <div className="relative max-w-[471px] w-full max-h-[3250px] md:max-h-[594px] h-full aspect-[471/594] text-primary-dark-4 font-sora text-md font-light leading-[150%] flex flex-col gap-4 overflow-clip">
-          <div
-            className="absolute hidden md:block left-0 top-0 w-full h-full"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(248, 241, 228, 0.00) 0%, #F8F1E4 76.92%)",
-            }}
-          />
-          <div
-            className="absolute md:hidden left-0 top-0 w-full h-full"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(248, 241, 228, 0.00) 0%, #F8F1E4 95.92%)",
-            }}
-          />
+          <AnimatePresence>
+            {!continueReading && (
+              <motion.div
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute hidden md:block left-0 top-0 w-full h-full"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(248, 241, 228, 0.00) 0%, #F8F1E4 76.92%)",
+                }}
+              />
+            )}
+          </AnimatePresence>
+          <AnimatePresence>
+            {!continueReading && (
+              <motion.div
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute md:hidden left-0 top-0 w-full h-full"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(248, 241, 228, 0.00) 0%, #F8F1E4 95.92%)",
+                }}
+              />
+            )}
+          </AnimatePresence>
           <p>
             Me chamo Dra. Júlia Farias, sou cirurgiã-dentista formada pela
             Universidade Federal da Bahia, uma das instituições de ensino mais
@@ -60,9 +79,12 @@ export function AboutMe() {
             um prazer te atender.
           </p>
         </div>
-        <a
-          href={`#`}
-          className="flex max-w-fit px-6 py-2 justify-center items-center gap-2 text-primary-light-4 text-center font-poppins text-base font-normal leading-[130%] transition-colors duration-300 ease-in-out hover:text-primary-light-3"
+        <button
+          onClick={() => setContinueReading(!continueReading)}
+          className={cn(
+            "flex max-w-fit px-6 py-2 justify-center items-center gap-2 text-primary-light-4 text-center font-poppins text-base font-normal leading-[130%] transition-colors duration-300 ease-in-out hover:text-primary-light-3",
+            continueReading && "invisible"
+          )}
         >
           Continuar leitura{" "}
           <svg
@@ -77,7 +99,7 @@ export function AboutMe() {
               fill="currentColor"
             />
           </svg>
-        </a>
+        </button>
       </div>
 
       <Marquee className="[--gap:2rem] md:[--gap:5rem] [--duration:120s]">

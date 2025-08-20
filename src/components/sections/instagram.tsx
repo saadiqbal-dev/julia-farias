@@ -44,11 +44,14 @@ export function Instagram() {
             </div>
           </div>
           <div className="max-w-[min(1100px,calc(100vw-32px))] md:max-w-[1100px] mx-auto">
-            <CarouselContent className="md:max-w-[1100px] mx-auto">
+            <CarouselContent className="max-w-[min(1100px,calc(100vw-32px))] mx-auto">
               {instagramPosts.map((url, index) => (
-                <CarouselItem key={index} className="basis-2/3 lg:basis-1/3">
+                <CarouselItem
+                  key={index}
+                  className="basis-9/10 pl-0 sm:basis-2/4 md:basis-2/5 lg:basis-1/3"
+                >
                   <div className="flex justify-center px-2 [&_.EmbeddedMediaImage]:object-cover!">
-                    <InstagramEmbed url={url} width={343} height={441} />
+                    <InstagramEmbed url={url} height={460} />
                   </div>
                 </CarouselItem>
               ))}

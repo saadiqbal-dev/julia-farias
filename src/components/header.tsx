@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { MobileDropdown } from "./navigation/mobile-dropdown";
+import { whatsappLink } from "@/data/links";
 
 type Section = {
   label: string;
@@ -47,11 +48,7 @@ export function Header() {
         ))}
       </div>
 
-      <a
-        href="https://contate.me/agendamentosdrajuliafarias"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
         <Button variant="outline" className="hidden lg:flex">
           ENTRAR EM CONTATO
         </Button>

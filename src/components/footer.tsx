@@ -81,21 +81,23 @@ const socialLinks: SocialLink[] = [
 
 type Location = {
   area: string;
-  line: string;
+  line?: string;
+  link?: string;
 };
 
 const locations: Location[] = [
   {
     area: "Vitória da Conquista, BA",
-    line: "Rua Cícero Simões, 83, Pituba, Salvador, Bahia, CEP 41830-475",
+    line: "Avenida Otávio Santos, 227, Sala 307, Recreio, Vitória da Conquista - Bahia, 45020-750",
+    link: "https://maps.app.goo.gl/MkAJayTFf1hZjmSN8",
   },
   {
     area: "Serrinha, BA",
-    line: "Rua Cícero Simões, 83, Pituba, Salvador, Bahia, CEP 41830-475",
+    line: "Avenida Josias Alves Santiago, s/n, Rodoviária, Serrinha - Bahia, 48700-000",
+    link: "https://maps.app.goo.gl/FaHd5pXUJ55vGMKG7",
   },
   {
     area: "Salvador, BA",
-    line: "Rua Cícero Simões, 83, Pituba, Salvador, Bahia, CEP 41830-475",
   },
 ];
 
@@ -142,9 +144,7 @@ export function Footer() {
           {locations.map((location) => (
             <a
               key={location.area}
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                location.line
-              )}`}
+              href={location.link || "#"}
               target="_blank"
               rel="noopener noreferrer"
               className="block hover:opacity-80 transition-opacity"

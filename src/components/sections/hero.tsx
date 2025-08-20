@@ -8,6 +8,7 @@ import {
   NavigationCardHeader,
   NavigationCardTitle,
 } from "../hero/navigation-card";
+import { whatsappLink } from "@/data/links";
 
 type NavigationCardItem = {
   category: string;
@@ -53,11 +54,7 @@ export function HeroSection() {
             Tenha um sorriso natural feito <br className="md:hidden" /> somente
             pra você
           </h1>
-          <a
-            href="https://contate.me/agendamentosdrajuliafarias"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <Button className="max-w-full md:max-w-fit">
               AGENDAR CONSULTA
             </Button>

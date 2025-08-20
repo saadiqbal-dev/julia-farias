@@ -10,6 +10,7 @@ import {
 } from "../ui/dialog";
 import { DialogTrigger } from "@radix-ui/react-dialog";
 import { Button } from "../ui/button";
+import { whatsappLink } from "@/data/links";
 
 interface ServiceCardProps {
   imgSrc: string;
@@ -74,7 +75,7 @@ export function ServiceCard({
         </div>
         <DialogFooter className="mt-4 shrink-0">
           <a
-            href="https://contate.me/agendamentosdrajuliafarias"
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="max-w-full w-full"

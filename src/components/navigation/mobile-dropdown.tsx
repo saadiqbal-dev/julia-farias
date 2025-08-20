@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "../ui/button";
+import { whatsappLink } from "@/data/links";
 
 interface MobileDropdownProps {
   sections: Array<{
@@ -218,7 +219,7 @@ export const MobileDropdown = React.memo(
                     className="pt-4"
                   >
                     <motion.a
-                      href="https://contate.me/agendamentosdrajuliafarias"
+                      href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.01 }}

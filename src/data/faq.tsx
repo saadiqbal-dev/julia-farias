@@ -21,12 +21,11 @@ export const faqs: FAQ[] = [
   },
   {
     question: "Quanto tempo dura o tratamento?",
-    answer:
-      "A resina é moldada em consultório, tem ótimo custo-benefício. A porcelana é mais durável e feita em laboratório.",
+    answer: "Até o resultado final, um mês.",
   },
   {
     question: "O resultado fica natural?",
     answer:
-      "A resina é moldada em consultório, tem ótimo custo-benefício. A porcelana é mais durável e feita em laboratório.",
+      "Sim! O sorriso é planejado para combinar com seu rosto, com acabamento estético e harmônico.",
   },
 ];
