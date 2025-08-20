@@ -26,7 +26,7 @@ export function AboutMe() {
         <h2 className="self-stretch text-primary-dark-2 font-poppins text-2xl md:text-[32px] font-medium tracking-[-0.32px]">
           Sobre mim
         </h2>
-        <div className="relative max-w-[471px] w-full max-h-[3250px] md:max-h-[594px] h-full aspect-[471/594] text-primary-dark-4 font-sora text-md font-light leading-[150%] flex flex-col gap-4 overflow-clip">
+        <div className="relative max-w-[471px] w-full max-h-fit md:max-h-[594px] h-full md:aspect-[471/594] text-primary-dark-4 font-sora text-md font-light leading-[150%] flex flex-col gap-4">
           <AnimatePresence>
             {!continueReading && (
               <motion.div
