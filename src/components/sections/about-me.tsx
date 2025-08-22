@@ -83,7 +83,7 @@ export function AboutMe() {
           onClick={() => setContinueReading(!continueReading)}
           className={cn(
             "flex max-w-fit px-6 py-2 justify-center items-center gap-2 text-primary-light-4 text-center font-poppins text-base font-normal leading-[130%] transition-colors duration-300 ease-in-out hover:text-primary-light-3",
-            continueReading && "invisible"
+            continueReading && "invisible",
           )}
         >
           Continuar leitura{" "}

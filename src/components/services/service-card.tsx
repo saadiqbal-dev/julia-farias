@@ -33,7 +33,7 @@ export function ServiceCard({
         <button
           className={cn(
             "flex w-full aspect-[315/280] min-h-[315px] lg:aspect-[348/380] flex-col justify-end items-start gap-8 rounded-3xl bg-white bg-cover bg-center bg-no-repeat overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-[1.0] active:scale-[1.0]",
-            className
+            className,
           )}
           style={{
             backgroundImage: `linear-gradient(0deg, rgba(248, 241, 228, 0.48), rgba(248, 241, 228, 0.48)), url(${imgSrc})`,
@@ -103,7 +103,7 @@ export function ServiceCardContent({
     <div
       className={cn(
         "flex px-6 pb-6 pt-10 flex-col items-start gap-3 self-stretch relative",
-        className
+        className,
       )}
       style={{
         background:
@@ -138,7 +138,7 @@ export function ServiceCardTitle({
     <h3
       className={cn(
         "text-primary-dark-4 self-stretch font-poppins text-xl font-semibold tracking-[-0.4px] leading-[145%]",
-        className
+        className,
       )}
     >
       {children}
@@ -159,7 +159,7 @@ export function ServiceCardSubTitle({
     <p
       className={cn(
         "text-secondary-dark-3 font-poppins text-sm font-medium tracking-[-0.28px] leading-[145%] flex items-center gap-2",
-        className
+        className,
       )}
     >
       <img src={Info} alt="Info" className="w-4 h-4" />

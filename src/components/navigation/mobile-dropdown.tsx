@@ -16,7 +16,7 @@ export const MobileDropdown = React.memo(
 
     const toggleMenu = React.useCallback(
       () => setIsMenuOpen((prev) => !prev),
-      []
+      [],
     );
     const closeMenu = React.useCallback(() => setIsMenuOpen(false), []);
 
@@ -241,7 +241,7 @@ export const MobileDropdown = React.memo(
         </AnimatePresence>
       </>
     );
-  }
+  },
 );
 
 MobileDropdown.displayName = "MobileDropdown";
