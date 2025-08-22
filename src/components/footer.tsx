@@ -3,6 +3,7 @@ import Logo from "@/assets/logo.svg";
 import Facebook from "@/assets/facebook.svg";
 import Instagram from "@/assets/instagram.svg";
 import Threads from "@/assets/threads.svg";
+import { whatsappLink } from "@/data/links";
 
 type Section = {
   label: string;
@@ -24,7 +25,7 @@ const sections: Section[] = [
   },
   {
     label: "Contato",
-    href: "#footer",
+    href: whatsappLink,
   },
   {
     label: "Serviços",
@@ -51,7 +52,7 @@ const sectionsMobile: Section[] = [
   },
   {
     label: "Contato",
-    href: "#footer",
+    href: whatsappLink,
   },
 ];
 
@@ -98,6 +99,8 @@ const locations: Location[] = [
   },
   {
     area: "Salvador, BA",
+    line: "Rua Frederico Simões, 98, Ed. Advanced Trade Center, Caminho das Árvores - CEP 41.820-774",
+    link: "https://maps.app.goo.gl/QnarTehKUEHjexkG9",
   },
 ];
 
@@ -166,7 +169,7 @@ export function Footer() {
                   {location.area}
                 </strong>
               </div>
-              <p className="text-primary-light-1-b ps-6 font-sora text-xs leading-[130%] tracking-[-0.12px]">
+              <p className="text-primary-light-1-b ps-6 max-w-[210px] font-sora text-[10px] leading-[130%] tracking-[-0.12px]">
                 {location.line}
               </p>
             </a>

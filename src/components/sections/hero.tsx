@@ -26,13 +26,13 @@ const navigationCards: NavigationCardItem[] = [
   },
   {
     category: "Serviços",
-    title: "Explore todos os meus serviços disponíveis para você",
+    title: "Explore todos os serviços disponíveis para você",
     imgSrc: "/images/foto-2.webp",
     href: "#servicos",
   },
   {
     category: "Dúvidas Frequentes",
-    title: "Uma dúvida apareceu? Veja se suas dúvidas estão dentro do FAQ",
+    title: "Tem alguma dúvida? Veja se ela já foi respondida no nosso FAQ",
     imgSrc: "/images/foto-3.webp",
     href: "#faq",
   },
@@ -51,8 +51,7 @@ export function HeroSection() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Tenha um sorriso natural feito <br className="md:hidden" /> somente
-            pra você
+            O sorriso é seu. <br /> A arte é minha.
           </h1>
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <Button className="max-w-full md:max-w-fit">
